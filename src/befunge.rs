@@ -138,6 +138,11 @@ impl Program {
 	pub fn get_instruction_char(&self, pos: [usize;2]) -> char {
 		self.instructions[pos[0]][pos[1]]
 	}
+
+	/// Sets the instruction character at the given position.
+	pub fn set_instruction_char(&mut self, pos: [usize;2], c: char) {
+		self.instructions[pos[0]][pos[1]] = c;
+	}
 }
 
 /// Direction for the instruction pointer.
@@ -360,16 +365,29 @@ impl Interpreter {
 					Action::None
 				},
 				'.' => {
-					print!("{}", self.stack.pop());
+					print!("{} ", self.stack.pop());
 					Action::None
 				},
 				',' => {
-					print!("{}", char::from_u32(self.stack.pop()).unwrap());
+					print!("{} ", char::from_u32(self.stack.pop()).unwrap());
 					Action::None
 				},
 				'#' => Action::Trampoline,
-				'p' => unimplemented!(),
-				'g' => unimplemented!(),
+				'p' => {
+					let x = self.stack.pop();
+					let y = self.stack.pop();
+					let v = self.stack.pop();
+
+					self.program.set_instruction_char([x as usize,y as usize],
+														char::from_u32(v).unwrap());
+					Action::None
+				},
+				'g' => {
+					let x = self.stack.pop();
+					let y = self.stack.pop();
+					self.stack.push(self.program.get_instruction_char([x as usize, y as usize]) as u32);
+					Action::None
+				},
 				'&' => {
 					let val = self.program.next_value();
 					self.stack.push(val);
