@@ -1,0 +1,7 @@
+[package]
+name = "rubefunge-93"
+version = "0.0.1"
+authors = ["AtheMathmo"]
+
+[dependencies]
+rand = "0.3.14"
