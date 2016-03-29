@@ -1,5 +1,9 @@
 # Rust Befunge-93
 
+[Api Docs](https://athemathmo.github.io/rubefunge-93/)
+
+---
+
 This is a toy implementation of a [Befunge](https://en.wikipedia.org/wiki/Befunge) compiler.
 
 I implemented this as part of an old [Angel Hack challenge](http://angelhack.com/solve-these-developer-challenges-to-snag-free-tickets-to-our-series/) (though I think the bufenge challenge code on this page contains an error...).
