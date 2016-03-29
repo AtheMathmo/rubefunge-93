@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Action","Actions to be taken by the interpreter."],["Direction","Direction for the instruction pointer."],["State","Current state of the interpreter."]],"struct":[["Interpreter","The Befunge interpreter."],["Program","The Befunge program"],["Stack","The Befunge program stack"]]});
