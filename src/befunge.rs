@@ -1,6 +1,6 @@
-//! The Befunge compiler module
+//! The Befunge interpreter module
 //!
-//! Contains the structs used to construct a Befunge compiler.
+//! Contains the structs used to construct a Befunge interpreter.
 //!
 //! # Examples
 //!

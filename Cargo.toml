@@ -1,7 +1,14 @@
 [package]
 name = "rubefunge-93"
-version = "0.0.1"
+version = "0.0.3"
 authors = ["AtheMathmo"]
+
+description = "A simple toy Befunge interpreter."
+repository = "https://github.com/AtheMathmo/rubefunge-93"
+documentation = "https://AtheMathmo.github.io/rubefunge-93/"
+keywords = ["bufenge", "esoteric", "reflective", "interpreter", "toy"]
+readme = "./README.md"
+license = "MIT"
 
 [dependencies]
 rand = "0.3.14"

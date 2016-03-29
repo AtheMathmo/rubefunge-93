@@ -1,6 +1,6 @@
 //! RuBefunge-93
 //!
-//! A simple, largely incomplete Befunge compiler written in Rust.
+//! A simple, largely incomplete Befunge interpreter written in Rust.
 
 extern crate rand;
 pub mod befunge;
